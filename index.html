@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>COLOR VOTE Angular/Firebase color voting system</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css'>
+
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <br />
+<div ng-app="App" ng-controller="AppCtrl" class="container">
+  <h2>投票前台 <i class="fa fa-bullhorn"></i></h2>
+  
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/jMN4cxyhJjk" frameborder="0" allowfullscreen></iframe>
+  
+  <h4>投下你神聖的一票!!!</h4>
+  <p>請按讚投票</p>
+ 
+  <div>
+
+	<div id="color-grid" ng-if="flag.checked">
+		<div ng-repeat="color in colors | orderBy: '-count'" style="border:#ddd 1px solid; border-radius:10px;" ng-if="color.name">
+			<p class="name" ng-if="color.name">{{ color.name }} </p>
+			<div class="color-unit" ng-style="{background: {{color.name}} }" ng-if="color.name">
+				<button ng-click="vote(color)" class="count"><i class="fa fa-thumbs-up"></i>{{ color.count }}</button>
+			</div>
+		</div>
+	</div>
+	<div id="color-grid" ng-if="!flag.checked">
+		<h4>活動尚未開始</h4>
+	</div>
+	
+  </div>
+</div>
+  <script src='https://cdn.firebase.com/js/client/2.2.4/firebase.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js'></script>
+  <script src='https://cdn.firebase.com/libs/angularfire/1.1.4/angularfire.min.js'></script>
+  <script src="js/index.js"></script>
+ </body>
+</html>
