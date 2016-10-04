@@ -1,8 +1,8 @@
 var App = angular.module("App", ["firebase"]);
 
 App.controller("AppCtrl", function($scope, $firebaseArray) {
-  //var ref = new Firebase("https://colorvote.firebaseio.com/");
-  var ref = new Firebase("https://test-b2a2d.firebaseio.com/");
+
+  var ref = new Firebase("https://fans-72dd1.firebaseio.com/");
   
   //var list = $firebaseArray(ref);
   $scope.colors = $firebaseArray(ref);
