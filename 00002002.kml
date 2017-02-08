@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+   <Document>
+      <Style id="DispatchPlacemark">
+         <PolyStyle>
+            <color>5bff0000</color>
+         </PolyStyle>
+         <LineStyle>
+            <color>ada00000</color>
+            <width>2</width>
+         </LineStyle>
+      </Style>
+      <Style id="JoinPlacemark">
+         <PolyStyle>
+            <color>5b0000ff</color>
+         </PolyStyle>
+         <LineStyle>
+            <color>ad0000ff</color>
+            <width>2</width>
+         </LineStyle>
+      </Style>
+      <Placemark>
+         <styleUrl>#DispatchPlacemark</styleUrl>
+         <name>派遣範圍</name>
+         <Polygon>
+            <outerBoundaryIs>
+               <LinearRing>
+                  <coordinates>121.557441,25.045061
+121.559357,25.045432
+121.565607,25.047900
+121.566647,25.045669
+121.568444,25.048539
+121.566078,25.048745
+121.565745,25.051643
+121.557242,25.051740
+121.557277,25.051560
+121.557891,25.051547
+121.557822,25.049160
+121.557634,25.049067
+121.557441,25.045061
+</coordinates>
+               </LinearRing>
+            </outerBoundaryIs>
+         </Polygon>
+      </Placemark>
+      <Placemark>
+         <styleUrl>#JoinPlacemark</styleUrl>
+         <name>報班範圍</name>
+         <Polygon>
+            <outerBoundaryIs>
+               <LinearRing>
+                  <coordinates>121.565607,25.047900
+121.566647,25.045669
+121.568444,25.048539
+121.566078,25.048745
+121.565745,25.051643
+121.557548,25.051886
+121.557441,25.045061
+121.559357,25.045432
+121.565607,25.047900
+</coordinates>
+               </LinearRing>
+            </outerBoundaryIs>
+         </Polygon>
+      </Placemark>
+   </Document>
+</kml>
